@@ -1,9 +1,10 @@
 <h1><%= @cocktail.name %></h1>
 
-<ul>
-<% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to  "Delete", dose_path(dose), method: :delete, data:{ confirm: "Are you sure ?"} %>
-  </li>
+<% if !@cocktail.doses[0].nil? %>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to  "Delete", dose_path(dose), method: :delete, data:{ confirm: "Are you sure ?"} %></li>
+    <% end %>
+  </ul>
 <% end %>
-</ul>
 <%= link_to  "Add More", new_cocktail_dose_path(@cocktail) %>
