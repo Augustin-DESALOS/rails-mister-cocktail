@@ -12,7 +12,8 @@
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Cocktails</a>
+    <a class="navbar-brand" href="/">Cocktails</a>
+    <a class="navbar-brand" href="/cocktails/new">Add Cocktail</a>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
@@ -23,6 +24,8 @@
       </form>
     </div>
   </nav>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
